@@ -1,0 +1,38 @@
+<div class="master-container">
+<div class="common">
+    <img src="common.png" alt="" width="100%">
+</div>
+
+<div class="LoginComponent">
+    <div class="logo">
+        LOGO
+    </div>
+        <mat-card appearance="outlined">
+            <mat-card-header>
+                <mat-card-title>Sign In</mat-card-title>
+            </mat-card-header>
+
+            <form [formGroup]="loginform" (ngSubmit)="SignIn()">
+            <mat-card-content>
+                <label>Enter your email address</label>
+                <mat-form-field appearance="outline">
+                <input matInput type="email" placeholder="Enter Email" formControlName="email" >
+                <mat-error class="error" *ngIf="loginform.controls['email'].invalid && loginform.controls['email'].touched">Please enter a valid email </mat-error>
+                </mat-form-field>
+                <label>Enter your password</label>
+                <mat-form-field appearance="outline">
+                    <input matInput type="password" placeholder="Enter Password" formControlName="password" >
+                    <mat-error class="error" *ngIf="loginform.controls['password'].invalid && loginform.controls['password'].touched ">Please enter a password </mat-error>
+                    </mat-form-field>
+
+            </mat-card-content>
+
+            <mat-card-actions>
+                <button mat-raised-button color="primary" type="submit">Sign In</button>
+                <button mat-raised-button color="primary" type="submit" (click)="frogotnav()">Forgot Password</button>
+            </mat-card-actions>
+         </form>
+         </mat-card>
+    
+</div>
+</div>

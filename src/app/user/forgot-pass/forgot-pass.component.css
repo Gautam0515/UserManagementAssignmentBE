@@ -1,0 +1,63 @@
+.common
+{
+    width: 50%;
+    height: 100vh;
+    align-items: stretch;
+}
+
+.common img
+{
+   width: 100%; 
+   height: 100%;
+   display: flex;
+}
+
+.LoginComponent
+{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center ;
+}
+
+.mat-mdc-card-outlined
+{
+    width: 80%;
+    height: 60%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.mat-mdc-card-content:first-child
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.master-container
+{
+    height: 100vh;
+    display: flex;
+}
+
+.mat-mdc-card-actions{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    align-items: stretch;
+    min-height: 52px;
+    padding: 8px;
+    justify-content: center;
+}
+.mat-mdc-raised-button:not(:disabled){
+    margin-bottom: 5%;
+    background-color: #4285F4;
+    color: white;
+}

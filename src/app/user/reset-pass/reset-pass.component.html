@@ -1,0 +1,38 @@
+<div class="master-container">
+    <div class="common">
+        <img src="common.png" alt="" width="100%">
+    </div>
+    
+    <div class="LoginComponent">
+        <div class="logo">
+            LOGO
+        </div>
+            <mat-card appearance="outlined">
+                <mat-card-header>
+                    <mat-card-title>Reset Password</mat-card-title>
+                </mat-card-header>
+    
+                <form [formGroup]="resetform" (ngSubmit)="ResetPass()">
+                <mat-card-content>
+                    <label>Enter your new password</label>
+                    <mat-form-field appearance="outline">
+                    <input matInput type="password" placeholder="Enter new password" formControlName="password" >
+                    <mat-error class="error" *ngIf="resetform.controls['password'].invalid && resetform.controls['password'].touched">Password must contain 1 uppercase, 1 lowercase, 1 number and 1 symbol </mat-error>
+                    </mat-form-field>
+                    <label>Re-Type your password</label>
+                    <mat-form-field appearance="outline">
+                        <input matInput type="confirmpassword" placeholder="Retype password" formControlName="confirmpassword" >
+                        <mat-error class="error" *ngIf="resetform.controls['confirmpassword'].invalid && resetform.controls['confirmpassword'].touched ">Re-type the password to confirm </mat-error>
+                        <mat-error *ngIf="flag"> Confirm password does not match new password</mat-error> 
+                        </mat-form-field>
+    
+                </mat-card-content>
+    
+                <mat-card-actions>
+                    <button mat-raised-button color="primary" type="submit">Reset</button>
+                </mat-card-actions>
+             </form>
+             </mat-card>
+        
+    </div>
+    </div>
